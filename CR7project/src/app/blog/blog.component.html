@@ -1,10 +1,10 @@
 <div class="container bg-secondary p-4 mt-5">
     <h2 class="mt-4 text-light">Destinations</h2>
     <div class="row mt-4">
-      <div class="col-4" *ngFor="let destination of destinations; index as blogId">
+      <div class="col-4" *ngFor="let destination of destinations; index as destinationId">
         <div class="productdetails m-2 border p-4 bg-light">
           <h3>
-            <a [routerLink]="['/destinations', blogId]">
+            <a [routerLink]="['destinations', destinationId]">
               {{ destination.heading }}
             </a>
           </h3>
@@ -13,7 +13,7 @@
             <button
               type="button"
               class="btn btn-primary"
-              [routerLink]="['/destinations', blogId]"
+             [routerLink]="['destinations', destinationId]"
             >
               More Info
             </button>

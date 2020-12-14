@@ -15,8 +15,9 @@ const routes: Routes = [
   path:"travel", component:TravelComponent
   },
   {
-      path:"destinations", component:DestinationsComponent
+  path:"destinations", component:DestinationsComponent
   },
+  
 ];
 
 @NgModule({

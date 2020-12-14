@@ -12,7 +12,7 @@ export class DestinationsComponent implements OnInit {
 
   ngOnInit (){
   this.route.paramMap.subscribe(params => {
-    this.destinations = destinations[+params.get('destiantionId')];
+    this.destinations = destinations[+params.get('destinationId')];
      });
 
 }
