@@ -1,0 +1,34 @@
+<div class="container overlay text-dark text-center p-5" >
+    <div class="row justify-content-center text-center pt-5">
+      <h1>Travel Summary</h1>
+    </div>
+
+
+<div class="cart-item justify-content-center text-center p-3 mb-2 bg-info text-white " *ngFor="let item of items" >
+ <span ><strong>{{ item.heading }}</strong> </span><br>
+ <span>{{ item.price }}</span><br>
+ <span><img src="{{ item.image }}" width="400"> </span>
+ 
+ 
+ <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <div>
+        <label for="name">
+          Name
+        </label>
+        <input id="name" type="text" formControlName="name">
+      </div>
+     
+      <div>
+        <label for="address">
+          Address
+        </label>
+        <input id="address" type="text" formControlName="address">
+      </div>
+
+    <button class="btn btn-warning" type="submit">Purchase</button>
+   
+   </form>
+   
+   
+</div>
+</div>
